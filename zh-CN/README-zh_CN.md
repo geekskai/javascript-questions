@@ -2979,7 +2979,7 @@ getItems(["banana", "apple"], "pear", "orange")
 </p>
 </details>
 
-
+---
 
 ###### <a name=20190817></a>95. 输出什么?
 
@@ -3330,7 +3330,6 @@ Promise.resolve(5)
 </p>
 </details>
 
----
 
 ###### 105. 输出什么?
 
@@ -3360,9 +3359,11 @@ compareMembers(person)
 
 对象通过引用传递。 当我们检查对象的严格相等性（===）时，我们正在比较它们的引用。
 
-我们将`person2`的默认值设置为等于`person`对象，并将`person`对象作为`person1`的值传递。
+我们将`person2`的默认值设置为`person`对象，并将`person`对象作为`person1`的值传递。
 
 这意味着两个值都引用内存中的同一位置，因此它们是相等的。
+
+运行“ else”语句中的代码块，并记录`They are the same!` 。
 
 </p>
 </details>
@@ -3395,11 +3396,13 @@ console.log(colorConfig.colors[1])
 
 #### 答案: D
 
-在JavaScript中，我们有两种访问对象属性的方法：括号表示法或点表示法。在此示例中，我们使用点表示法（`colorConfig.colors`）代替括号表示法（`colorConfig ['colors']`）。
+在JavaScript中，我们有两种访问对象属性的方法：括号表示法或点表示法。 在此示例中，我们使用点表示法（`colorConfig.colors`）代替括号表示法（`colorConfig [“ colors”]`）。
 
-使用点表示法，JavaScript会尝试使用该确切名称在对象上查找属性。在此示例中，JavaScript尝试在`colorconfig`对象上找到名为`'colors'`的属性。没有`'colors'`的属性，因此返回`undefined`。然后，我们尝试使用`[1]`访问第一个元素的值。我们无法对`undefined`执行此操作，因此会抛出`TypeError`: `Cannot read property '1' of undefined`
+使用点表示法，JavaScript会尝试使用该确切名称在对象上查找属性。 在此示例中，JavaScript尝试在colorconfig对象上找到名为colors的属性。 没有名为“colors”的属性，因此返回“undefined”。
+然后，我们尝试使用`[1]`访问第一个元素的值。 我们无法对未定义的值执行此操作，因此会抛出`Cannot read property '1' of undefined`。
 
-当我们使用方括号表示法时，JavaScript会看到第一个左方括号`[`，并且一直走到找到右方括号`]`。只有这样，它才会解析该语句。如果我们使用了`colorConfig[colors[1]]`，它将返回`colorConfig`对象上`red`属性的值。
+JavaScript解释（或取消装箱）语句。 当我们使用方括号表示法时，它会看到第一个左方括号`[`并一直进行下去，直到找到右方括号`]`。 只有这样，它才会评估该语句。 如果我们使用了colorConfig [colors [1]]，它将返回colorConfig对象上red属性的值。
+
 
 </p>
 </details>
@@ -3482,7 +3485,7 @@ console.log(food)
 
 我们将`info`对象上的`favoriteFood`属性的值设置为披萨表情符号“🍕”的字符串。字符串是原始数据类型。在JavaScript中，原始数据类型通过值起作用
 
-在这种情况下，我们将`info`对象上的`favoriteFood`属性的值设置为等于`food`数组中的第一个元素的值，字符串为披萨表情符号（`'🍕'` ）。字符串是原始数据类型，并且通过值进行交互，我们更改`info`对象上`favoriteFood`属性的值。 food数组没有改变，因为favoriteFood的值只是该数组中第一个元素的值的复制，并且与该元素上的元素没有相同的内存引用食物`[0]`。当我们记录食物时，它仍然是原始数组'['🍕'，'🍫'，'🥑'，'🍔']`。
+在这种情况下，我们将`info`对象上的`favoriteFood`属性的值设置为等于`food`数组中的第一个元素的值，字符串为披萨表情符号（`'🍕'` ）。字符串是原始数据类型，并且通过值进行交互，我们更改`info`对象上`favoriteFood`属性的值。 food数组没有改变，因为favoriteFood的值只是该数组中第一个元素的值的复制，并且与该元素上的元素没有相同的内存引用食物`[0]`。当我们记录食物时，它仍然是原始数组`['🍕'，'🍫'，'🥑'，'🍔']`。
 
 </p>
 </details>
