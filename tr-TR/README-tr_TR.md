@@ -12,20 +12,23 @@ Daha fazla soru eklendikçe eposta almak ister misiniz?<br />
 
 Mevcut dillerin listesi:
 
-* [English](./README.md)
-* [العربية](./README_AR.md)
-* [اللغة العامية - Egyptian Arabic](./README_ar-EG.md)
-* [Bosanski](./README-bs_BS.md)  
-* [Deutsch](./README-de_DE.md)  
-* [Español](./README-ES.md)
-* [日本語](./README-ja_JA.md)  
-* [한국어](./README-ko_KR.md) 
-* [Português Brasil](./README_pt_BR.md)  
-* [Русский](./ru-RU/README.md)
-* [Українська мова](./README-ua_UA.md)  
-* [Tiếng Việt](./README-vi.md)
-* [中文版本](./README-zh_CN.md)
-* [Türkçe](./README-tr_TR.md)
+* [English](../en-EN/README.md)
+* [العربية](../ar-AR/README_AR.md)
+* [اللغة العامية - Egyptian Arabic](../ar-EG/README_ar-EG.md)
+* [Bosanski](../bs-BS/README-bs_BS.md)  
+* [Deutsch](../de-DE/README.md)  
+* [Español](../es-ES/README-ES.md)
+* [Français](../fr-FR/README_fr-FR.md)
+* [日本語](../ja-JA/README-ja_JA.md)  
+* [한국어](../ko-KR/README-ko_KR.md)
+* [Nederlands](./nl-NL/README.md)
+* [Português Brasil](../pt-BR/README_pt_BR.md)  
+* [Русский](../ru-RU/README.md)
+* [Українська мова](../ua-UA/README-ua_UA.md)  
+* [Tiếng Việt](../vi-VI/README-vi.md)
+* [中文版本](../zh-CN/README-zh_CN.md)
+* [Türkçe](../tr-TR/README-tr_TR.md)
+* [ไทย](../th-TH/README-th_TH.md)
 
 ---
 
@@ -867,9 +870,9 @@ console.log(a[b]);
 
 Nesne keyleri otomatik olarak stringe dönüştürülür. `a` nesnesine değeri `123` olacak şekilde, bir nesneyi key olarak atamaya çalışıyoruz.
 
-Ancak, bir nesnesi string hale getirince, `"[Object object]"` olur. Dolayısıyla burada söylediğimiz, `a["Object object"] = 123`. Sonra, aynı şeyi tekrar yapmayı deniyoruz. `c`, dolaylı olarak string hale getirdiğimiz başka bir nesne. O halde, `a["Object object"] = 456`.
+Ancak, bir nesnesi string hale getirince, `"[object Object]"` olur. Dolayısıyla burada söylediğimiz, `a["object Object"] = 123`. Sonra, aynı şeyi tekrar yapmayı deniyoruz. `c`, dolaylı olarak string hale getirdiğimiz başka bir nesne. O halde, `a["object Object"] = 456`.
 
-Sonra, `a[b]`'yi logluyoruz, ki aslında o da `a["Object object"]`. Onu da `456` olarak atamıştık, o yüzden `456` döndürür.
+Sonra, `a[b]`'yi logluyoruz, ki aslında o da `a["object Object"]`. Onu da `456` olarak atamıştık, o yüzden `456` döndürür.
 
 </p>
 </details>
@@ -1010,7 +1013,7 @@ sayHi.bind(person, 21);
 
 İkisinde de, `this` anahtar kelimesinin referans olmasını istediğimiz nesneyi geçebiliriz. Ancak, `.call` _anında çalıştırılır_!
 
-`.bind.` fonksiyonun _kopyasını_ döndürür, ama konteksle bağlı şejilde. Anında çalıştırılmaz.
+`.bind.` fonksiyonun _kopyasını_ döndürür, ama konteksle bağlı şekilde. Anında çalıştırılmaz.
 
 </p>
 </details>
@@ -1189,7 +1192,7 @@ JavaScript sadece primitif ve nesne tiplerine sahiptir.
 
 Primitif tipler, `boolean`, `null`, `undefined`, `bigint`, `number`, `string`, ve `symbol`.
 
-Primitif ve nesneyi birbirinden ayıran, primitif tiplerin herhangi bir özelliğie ya da methoda sahip olmamasıdır; ancak, fark edeceğiniz üzere `'foo'.toUpperCase()` `'FOO'` olarak değer döndürür ve `TypeError` ile sonuçlanmaz. Bunun sebebi, string gibi primitif bir tip üzerinde özelliğe ya da methoda erişmeye çalıştığınızda, JavaScript sarıcı sınıflardan, "wrapper classes", birini kullanarak nesneyi dolaylı şekilde sarar, örneğin `String`, ve sonrasında ifade çalıştıktan sonra anında sarıcıyı ayırır. `null` ve `undefined` dışındaki tüm primitifler bu şekilde davranır.
+Primitif ve nesneyi birbirinden ayıran, primitif tiplerin herhangi bir özelliğe ya da metoda sahip olmamasıdır; ancak, fark edeceğiniz üzere `'foo'.toUpperCase()` `'FOO'` olarak değer döndürür ve `TypeError` ile sonuçlanmaz. Bunun sebebi, string gibi primitif bir tip üzerinde özelliğe ya da methoda erişmeye çalıştığınızda, JavaScript sarıcı sınıflardan, "wrapper classes", birini kullanarak nesneyi dolaylı şekilde sarar, örneğin `String`, ve sonrasında ifade çalıştıktan sonra anında sarıcıyı ayırır. `null` ve `undefined` dışındaki tüm primitifler bu şekilde davranır.
 
 </p>
 </details>
@@ -1327,9 +1330,9 @@ console.log(gen.next().value);
 
 Sıradan fonksiyonlar yürütmenin başlamasının ardından yarı yolda durdurulamaz. Ancak, bir generator fonksiyon yarı yolda "durdurabilir" ve sonra nerede kaldıysa devam edebilir. Bir generator fonksiyon ne zaman `yield` anahtar kelimesiyle karşılaşsa, yield'de belirtilen değeri verir. Dikkat edin, generator fonksiyon değeri _döndürmez_ (_return_), değeri _verir_ (_yield_). 
 
-Önce, generator fonksiyonu `i`'yi `10`'a eşitleyerek başlatıyoruz. `next()` methodunu kullanarak generator fonksiyonu çalıştırıyoruz. İlk kez generator fonksiyonu çalıştırdığımızda, `i` `10`'a eşit. Fonksiyon ilk `yield` anahtar kelimesi ile karşılaşıyor: `i`'nin değerini veriyor. Generatır şimdi "durdu", ve `10` loglandı.
+Önce, generator fonksiyonu `i`'yi `10`'a eşitleyerek başlatıyoruz. `next()` metodunu kullanarak generator fonksiyonu çalıştırıyoruz. İlk kez generator fonksiyonu çalıştırdığımızda, `i` `10`'a eşit. Fonksiyon ilk `yield` anahtar kelimesi ile karşılaşıyor: `i`'nin değerini veriyor. Generatır şimdi "durdu", ve `10` loglandı.
 
-Sonra, `next()` methodunu kullanarak fonksiyonu tekrar çalıştırıyoruz. Fonksiyon önceki kaldığı yerden çalışmaya devam ediyor, `i` hala `10`'a eşit. Şimdi, fonksiyon sıraki `yield` anahtar kelimesi ile karşılaşıyor, ve `i * 2`'yi veriyor, yani fonksiyon `10 * 2` veriyor, ki o da `20`'dir. `10, 20` şeklinde sonuçlanıyor.
+Sonra, `next()` metodunu kullanarak fonksiyonu tekrar çalıştırıyoruz. Fonksiyon önceki kaldığı yerden çalışmaya devam ediyor, `i` hala `10`'a eşit. Şimdi, fonksiyon sıraki `yield` anahtar kelimesi ile karşılaşıyor, ve `i * 2`'yi veriyor, yani fonksiyon `10 * 2` veriyor, ki o da `20`'dir. `10, 20` şeklinde sonuçlanıyor.
 
 </p>
 </details>
@@ -1964,7 +1967,7 @@ console.log(num2);
 const value = { number: 10 };
 
 const multiply = (x = { ...value }) => {
-  console.log((x.number * 2));
+  console.log((x.number *= 2));
 };
 
 multiply();
@@ -2864,7 +2867,7 @@ console.log(newList.push(5))
 
 `.push` methodu dizinin _yeni uzunluğunu_ döndürür, dizinin kendisini değil! `newList`'i  `[1, 2, 3].push(4)`'a eşitleyerek, `newList`'i dizinin yeni uzunluğuna eşitledik: `4`.
 
-Sonra, `.push` methodunu `newList` üzerinde kullanmayo denedik. `newList` sayısal değer `4` olduğundan, `.push` methodunu kullanamayız: TypeError fırlatılır.
+Sonra, `.push` methodunu `newList` üzerinde kullanmayı denedik. `newList` sayısal değer `4` olduğundan, `.push` methodunu kullanamayız: TypeError fırlatılır.
 
 </p>
 </details>
@@ -2914,9 +2917,9 @@ for (const [x, y] of Object.entries(person)) {
 }
 ```
 
-- A: `name` `Lydia` and `age` `21`
-- B: `["name", "Lydia"]` and `["age", 21]` 
-- C: `["name", "age"]` and `undefined`
+- A: `name` `Lydia` ve `age` `21`
+- B: `["name", "Lydia"]` ve `["age", 21]` 
+- C: `["name", "age"]` ve `undefined`
 - D: `Error`
 
 <details><summary><b>Cevap</b></summary>

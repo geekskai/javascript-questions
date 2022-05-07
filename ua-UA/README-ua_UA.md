@@ -6,12 +6,23 @@
 
 Відповіді знаходяться в згорнутої секції нижче питань. Просто натисни на відповідь, щоб розгорнути. Успіхів! :heart:
 
-[中文版本](./README-zh_CN.md)  
-[Русский](./README_ru-RU.md)  
-[Western Balkan](./README-bs_BS.md)  
-[Deutsch](./README-de_DE.md)  
-[Tiếng Việt](./README-vi.md)  
-[日本語](./README-ja_JA.md)   
+* [English](../en-EN/README.md)
+* [العربية](../ar-AR/README_AR.md)
+* [اللغة العامية - Egyptian Arabic](../ar-EG/README_ar-EG.md)
+* [Bosanski](../bs-BS/README-bs_BS.md)  
+* [Deutsch](../de-DE/README.md)  
+* [Español](../es-ES/README-ES.md)
+* [Français](../fr-FR/README_fr-FR.md)
+* [日本語](../ja-JA/README-ja_JA.md)  
+* [한국어](../ko-KR/README-ko_KR.md)
+* [Nederlands](./nl-NL/README.md)
+* [Português Brasil](../pt-BR/README_pt_BR.md)  
+* [Русский](../ru-RU/README.md)
+* [Українська мова](../ua-UA/README-ua_UA.md)  
+* [Tiếng Việt](../vi-VI/README-vi.md)
+* [中文版本](../zh-CN/README-zh_CN.md)
+* [Türkçe](../tr-TR/README-tr_TR.md)
+* [ไทย](../th-TH/README-th_TH.md)
 
 ---
 
@@ -862,9 +873,9 @@ console.log(a[b]);
 
 Ключі об'єкта автоматично конвертуються в рядки. Ми збираємося додати об'єкт в якості ключа до об'єкта `a` зі значенням `123`.
 
-Проте, коли ми наводимо об'єкт до рядка, він стає `"[object Object]"`. Таким чином, ми говоримо, що `a["Object object"] = 123`. Потім ми робимо те ж саме. `c` це інший об'єкт, який ми неявно наводимо до рядка. Тому `a["Object object"] = 456`.
+Проте, коли ми наводимо об'єкт до рядка, він стає `"[object Object]"`. Таким чином, ми говоримо, що `a["object Object"] = 123`. Потім ми робимо те ж саме. `c` це інший об'єкт, який ми неявно наводимо до рядка. Тому `a["object Object"] = 456`.
 
-Потім, коли ми виводимо `a[b]`, ми маємо на увазі `a["Object object"]`. Ми тільки що встановили туди значення `456`, тому в результаті отримуємо `456`.
+Потім, коли ми виводимо `a[b]`, ми маємо на увазі `a["object Object"]`. Ми тільки що встановили туди значення `456`, тому в результаті отримуємо `456`.
 
 </p>
 </details>

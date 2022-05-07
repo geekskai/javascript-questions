@@ -14,17 +14,23 @@
 
 اللغات المتوفرة:
 
-* [English](./README.md)
-* [中文版本](./README-zh_CN.md)
-* [Versión en español](./README-ES.md)
-* [日本語](./README-ja_JA.md)  
-* [한국어](./README-ko_KR.md) 
-* [Русский](./ru-RU/README.md)
-* [Western Balkan](./README-bs_BS.md)  
-* [Deutsch](./README-de_DE.md)  
-* [Tiếng Việt](./README-vi.md)
-* [Українська мова](./README-ua_UA.md)  
-* [Português Brasil](./README_pt_BR.md) 
+* [English](../en-EN/README.md)
+* [العربية](../ar-AR/README_AR.md)
+* [اللغة العامية - Egyptian Arabic](../ar-EG/README_ar-EG.md)
+* [Bosanski](../bs-BS/README-bs_BS.md)  
+* [Deutsch](../de-DE/README.md)  
+* [Español](../es-ES/README-ES.md)
+* [Français](../fr-FR/README_fr-FR.md)
+* [日本語](../ja-JA/README-ja_JA.md)  
+* [한국어](../ko-KR/README-ko_KR.md)
+* [Nederlands](./nl-NL/README.md)
+* [Português Brasil](../pt-BR/README_pt_BR.md)  
+* [Русский](../ru-RU/README.md)
+* [Українська мова](../ua-UA/README-ua_UA.md)  
+* [Tiếng Việt](../vi-VI/README-vi.md)
+* [中文版本](../zh-CN/README-zh_CN.md)
+* [Türkçe](../tr-TR/README-tr_TR.md)
+* [ไทย](../th-TH/README-th_TH.md)
 </div>
 
 ____________
@@ -905,10 +911,10 @@ console.log(a[b]);
 
 مفاتيح ال object يتم تحويلها اوتوماتيكيا الى strings. نحن نحاول أن نقوم بجعل  object عبارة عن مفتاح للobject `a`, و الذي يحمل القيمة `123`.  
 
-و لكن, عندما نقوم بمحاول جعل object الى نوع string, سيصبح `"[Object object]"`. لذا ما نحاول أن نقوله هنا, هو أن `a["Object object"] = 123`.
-إذا, سنحاول أن نفعل هذا مرة أخرى , `c` هو object آخر سنقوم بتحويله الى string بصورة صريحة, لذا `a["Object object"] = 456`.  
+و لكن, عندما نقوم بمحاول جعل object الى نوع string, سيصبح `"[object Object]"`. لذا ما نحاول أن نقوله هنا, هو أن `a["object Object"] = 123`.
+إذا, سنحاول أن نفعل هذا مرة أخرى , `c` هو object آخر سنقوم بتحويله الى string بصورة صريحة, لذا `a["object Object"] = 456`.  
 
-إذاَ, نحن نقوم بعمل log ل `a[b]`, و التي هي في الحقيقة `a["Object object"]`. و نحن قبل قليل قمنا بوضع قيمتها التي تساوي `456`, لذا ستقوم بإرجاع `456`.    
+إذاَ, نحن نقوم بعمل log ل `a[b]`, و التي هي في الحقيقة `a["object Object"]`. و نحن قبل قليل قمنا بوضع قيمتها التي تساوي `456`, لذا ستقوم بإرجاع `456`.    
 </p>
 </details>
 </div>
